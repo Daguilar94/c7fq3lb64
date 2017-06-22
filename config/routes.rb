@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  root 'expenses#index'
-  
-  resources :expenses, only: [:index]
+  devise_for :users
 
+  root 'expenses#index'
+  resources :users, except: [:new, :create, :index] do
+    resources :expenses, only: [:index]
+    member do
+      get 'expenses'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

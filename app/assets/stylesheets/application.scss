@@ -2,7 +2,7 @@
 
 $gray-darker:           #33373a;
 $gray:                  #3D4245;
-$gray-light:            #99a0a2;   
+$gray-light:            #99a0a2;
 
 $brand-primary:         $gray;
 $btn-primary-color:     #ccc;
@@ -28,5 +28,6 @@ $navbar-inverse-link-active-bg:            $body-bg;
 
 @import "bootstrap";
 @import "expenses";
+@import "devise";
 
 .navbar-inverse { border: 0; }
